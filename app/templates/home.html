@@ -1,0 +1,396 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furni</title>
+
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {% endblock %}
+</head>
+<body>
+<div class="e">
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Furni<span>.</span></div>
+    <nav class="nav-links">
+      <a href="{% url 'home' %}" class="active">Home</a>
+      <a href="{% url 'shop' %}" >Shop</a>
+      <a href="{% url 'about' %}">About us</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'blog' %}">Blog</a>
+      <a href="{% url 'contact' %}">Contact us</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="{% url 'login'%}"><i class="fa-regular fa-user"></i></a>
+      <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Modern Interior<br>Design Studio</h1>
+      <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
+      <div class="buttons">
+        <a href="#" class="btn-yellow">Shop Now</a>
+        <a href="#" class="btn-outline">Explore</a>
+      </div>
+    </div>
+    <img src="{% static 'images/b.png' %}" alt="sofa">
+  </section>
+  </div>
+<!-- phase--2 -->
+
+<div class="r">
+  <section class="container">
+    <!-- Left Text Section -->
+    <div class="text-section">
+      <h1>Crafted with excellent material.</h1>
+      <p>
+        Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. 
+        Aliquam vulputate velit imperdiet dolor tempor tristique.
+      </p>
+      <button>Explore</button>
+    </div>
+
+    <!-- Right Product Section -->
+    <div class="products">
+      <div class="product">
+        <img src="{% static 'images/product-1.png' %}" alt="Nordic Chair">
+        <h3>Nordic Chair</h3>
+        <p>$50.00</p>
+      </div>
+
+      <div class="product">
+        <img src="{% static 'images/product-2.png' %}"alt="Kruzo Aero Chair">
+        <h3>Kruzo Aero Chair</h3>
+        <p>$78.00</p>
+      </div>
+
+      <div class="product">
+        <img src="{% static 'images/product-3.png' %}"alt="Ergonomic Chair">
+        <h3>Ergonomic Chair</h3>
+        <p>$43.00</p>
+      </div>
+    </div>
+  </section>
+  </div>
+<!-- phse---3 -->
+
+
+<div class="b">
+<section class="choose-section">
+  <div class="choose-container">
+    <!-- Left Content -->
+    <div class="choose-left">
+      <h2>Why Choose Us</h2>
+      <p>
+        Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. 
+        Aliquam vulputate velit imperdiet dolor tempor tristique.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <i class="fa-solid fa-truck"></i>
+          <div>
+            <h3>Fast & Free Shipping</h3>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <div>
+            <h3>Easy to Shop</h3>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <h3>24/7 Support</h3>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <i class="fa-solid fa-rotate-left"></i>
+          <div>
+            <h3>Hassle Free Returns</h3>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="choose-right">
+      <img src="{% static '/images/why-choose-us-img.jpg' %}" alt="Why Choose Us">
+    </div>
+  </div>
+</section>
+</div>
+
+
+<!-- phse---4 -->
+ <div class="b2">
+ 
+<section class="interior-section">
+  <div class="interior-container">
+    
+    <!-- Left Images -->
+    <div class="interior-images">
+      <div class="img-box tall">
+        <img src="{% static 'images/post-1.jpg' %}" alt="Interior 1">
+      </div>
+      <div class="img-box small">
+        <img src="{% static 'images/post-3.jpg' %}"alt="Interior 2">
+      </div>
+      <div class="img-box wide">
+        <img src="{% static 'images/post-2.jpg' %}"alt="Interior 3">
+      </div>
+    </div>
+
+    <!-- Right Content -->
+    <div class="interior-content">
+      <h2>We Help You Make Modern Interior Design</h2>
+      <p>
+        Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl 
+        dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit 
+        imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique 
+        senectus et netus et malesuada.
+      </p>
+
+      <ul class="features-list">
+        <li>Donec vitae odio quis nisl dapibus malesuada</li>
+        <li>Donec vitae odio quis nisl dapibus malesuada</li>
+        <li>Donec vitae odio quis nisl dapibus malesuada</li>
+        <li>Donec vitae odio quis nisl dapibus malesuada</li>
+      </ul>
+
+      <button>Explore</button>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- phse----5 -->
+
+<section class="product-section">
+  <div class="product-card">
+    <img src="{% static 'images/product-1.png' %}" alt="Nordic Chair">
+    <div class="product-info">
+      <h3>Nordic Chair</h3>
+      <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="{% static 'images/product-2.png' %}" alt="Kruzo Aero Chair">
+    <div class="product-info">
+      <h3>Kruzo Aero Chair</h3>
+      <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="{% static 'images/product-3.png' %}" alt="Ergonomic Chair">
+    <div class="product-info">
+      <h3>Ergonomic Chair</h3>
+      <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio</p>
+      <a href="#">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- phse---6 -->
+ <section class="testimonial-section">
+  <h2>Testimonials</h2>
+
+  <div class="slider">
+
+    <!-- Radio Buttons (hidden) -->
+    <input type="radio" name="slider" id="t-1" checked>
+    <input type="radio" name="slider" id="t-2">
+    <input type="radio" name="slider" id="t-3">
+
+    <!-- Slides -->
+    <div class="slides">
+      <div class="testimonial t1">
+        <p class="quote">“Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. 
+        Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.”</p>
+        <div class="author">
+          <img src="{% static 'images/person_1.jpg' %}" alt="">
+          <h3>Maria Jones</h3>
+          <span>CEO, Co-Founder, XYZ Inc.</span>
+        </div>
+      </div>
+
+      <div class="testimonial t2">
+        <p class="quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.”</p>
+        <div class="author">
+          <img src="{% static 'images/person_2.jpg' %}" alt="">
+          <h3>John Doe</h3>
+          <span>CTO, ABC Ltd.</span>
+        </div>
+      </div>
+
+      <div class="testimonial t3">
+        <p class="quote">“Aliquam erat volutpat. Phasellus ultrices nulla quis nibh. Quisque a lectus.”</p>
+        <div class="author">
+          <img src="{% static 'images/person_3.jpg' %}"alt="">
+          <h3>Sarah Lee</h3>
+          <span>Marketing Head, DEF Corp.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <div class="arrows">
+      <label for="t-1" class="prev">&#10094;</label>
+      <label for="t-2" class="prev">&#10094;</label>
+      <label for="t-3" class="prev">&#10094;</label>
+
+      <label for="t-1" class="next">&#10095;</label>
+      <label for="t-2" class="next">&#10095;</label>
+      <label for="t-3" class="next">&#10095;</label>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots">
+      <label for="t-1" class="dot"></label>
+      <label for="t-2" class="dot"></label>
+      <label for="t-3" class="dot"></label>
+    </div>
+
+  </div>
+</section>
+
+<!-- phh---7 -->
+ <div class="ph">
+   <section class="blog-section">
+    <div class="blog-header">
+      <h2>Recent Blog</h2>
+      <a href="#">View All Posts</a>
+    </div>
+
+    <div class="blog-container">
+      <!-- Blog Card 1 -->
+      <div class="blog-card">
+        <img src="{% static 'images/post-1.jpg' %}" alt="Blog Image">
+        <div class="blog-content">
+          <h3>First Time Home Owner Ideas</h3>
+          <p>by <span>Kristin Watson</span> on Dec 19, 2021</p>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="blog-card">
+        <img src="{% static 'images/post-2.jpg' %}"  alt="Blog Image">
+        <div class="blog-content">
+          <h3>How To Keep Your Furniture Clean</h3>
+          <p>by <span>Robert Fox</span> on Dec 15, 2021</p>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="blog-card">
+        <img src="{% static 'images/post-3.jpg' %}"  alt="Blog Image">
+        <div class="blog-content">
+          <h3>Small Space Furniture Apartment Ideas</h3>
+          <p>by <span>Kristin Watson</span> on Dec 12, 2021</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+<!-- phse---9 -->
+
+
+  <!-- Footer Section -->
+   <div class="fo">
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <div class="newsletter-text">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Subscribe to Newsletter</span>
+      </div>
+      <form class="newsletter-form">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+     
+        <!-- <img src="{% static 'images/sofa.png' %}" alt="Chair"> -->
+      </div>
+    </div>
+
+    <!-- Footer Main Content -->
+    <div class="footer-main">
+      <!-- Left Logo/Desc -->
+      <div class="footer-about">
+        <h2>Furni.</h2>
+        <p>
+          Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. 
+          Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. 
+          Pellentesque habitant.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div>
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div>
+          <a href="#">Support</a>
+          <a href="#">Knowledge base</a>
+          <a href="#">Live chat</a>
+        </div>
+        <div>
+          <a href="#">Jobs</a>
+          <a href="#">Our team</a>
+          <a href="#">Leadership</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div>
+          <a href="#">Nordic Chair</a>
+          <a href="#">Kruzo Aero</a>
+          <a href="#">Ergonomic Chair</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>Copyright ©2025. All Rights Reserved. — Designed with love by Untree.co Distributed By ThemeWagon</p>
+      <div>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

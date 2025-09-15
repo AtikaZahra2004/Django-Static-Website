@@ -1,0 +1,288 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {% endblock %}
+  
+ 
+</head>
+<body>
+<div class="b1">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Furni<span>.</span></div>
+    <nav class="nav-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'shop' %}">Shop</a>
+      <a href="{% url 'about' %}"  class="active">About us</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'blog' %}" >Blog</a>
+      <a href="{% url 'contact' %}">Contact us</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="{% url  'login' %}"><i class="fa-regular fa-user"></i></a>
+      <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="banner">
+    <h1>ABOUT-US</h1>
+  </section>
+</div>
+
+<!-- phse---2 -->
+
+<section class="why-choose">
+  <div class="container">
+    <!-- Left Content -->
+    <div class="content">
+      <h2>Why Choose Us</h2>
+      <p>
+        Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.
+        Aliquam vulputate velit imperdiet dolor tempor tristique.
+      </p>
+
+      <div class="features">
+        <div class="feature-box">
+          <i class="fa-solid fa-truck-fast"></i>
+          <div>
+            <h4>Fast & Free Shipping</h4>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <div>
+            <h4>Easy to Shop</h4>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-headset"></i>
+          <div>
+            <h4>24/7 Support</h4>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.</p>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-rotate-left"></i>
+          <div>
+            <h4>Hassle Free Returns</h4>
+            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="image">
+      <img src="{% static 'images/sofa.png' %}" alt="Sofa Image">
+    </div>
+  </div>
+</section>
+
+<!-- phase-----3 -->
+
+<section class="team-section">
+  <div class="container">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <img src="{% static 'images/person_4.jpg' %}" alt="Lawson Arnold">
+        <h3>Lawson Arnold</h3>
+        <p class="role">CEO, Founder, Atty.</p>
+        <p class="desc">
+          Separated they live in. Separated they live in Bookmarksgrove right at
+          the coast of the Semantics, a large language ocean.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <img src="{% static 'images/person_3.jpg' %}" alt="Jeremy Walker">
+        <h3>Jeremy Walker</h3>
+        <p class="role">CEO, Founder, Atty.</p>
+        <p class="desc">
+          Separated they live in. Separated they live in Bookmarksgrove right at
+          the coast of the Semantics, a large language ocean.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <img src="{% static 'images/person_2.jpg' %}" alt="Patrik White">
+        <h3>Patrik White</h3>
+        <p class="role">CEO, Founder, Atty.</p>
+        <p class="desc">
+          Separated they live in. Separated they live in Bookmarksgrove right at
+          the coast of the Semantics, a large language ocean.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <img src="{% static 'images/person-1.jpg' %}" alt="Kathryn Ryan">
+        <h3>Kathryn Ryan</h3>
+        <p class="role">CEO, Founder, Atty.</p>
+        <p class="desc">
+          Separated they live in. Separated they live in Bookmarksgrove right at
+          the coast of the Semantics, a large language ocean.
+        </p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- phse---4 -->
+ <section class="testimonials">
+  <h2>Testimonials</h2>
+  <div class="slider">
+
+    <!-- Radio buttons (for slide control) -->
+    <input type="radio" name="toggler" id="slide1" checked>
+    <input type="radio" name="toggler" id="slide2">
+    <input type="radio" name="toggler" id="slide3">
+
+    <!-- Slides -->
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <p>
+          “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.
+          Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.”
+        </p>
+        <div class="author">
+          <img src="{% static 'images/person-1.jpg' %}" alt="Maria Jones">
+          <h4>Maria Jones</h4>
+          <span>CEO, Co-Founder, XYZ Inc.</span>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <p>
+          “Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique
+          senectus et netus et malesuada fames ac turpis egestas.”
+        </p>
+        <div class="author">
+          <img src="{% static 'images/person_2.jpg' %}" alt="John Smith">
+          <h4>John Smith</h4>
+          <span>CTO, Example Corp.</span>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <p>
+          “Integer convallis volutpat dui quis scelerisque. Sed facilisis magna ut purus tristique
+          malesuada. Nam accumsan augue in nibh tincidunt, non bibendum nulla facilisis.”
+        </p>
+        <div class="author">
+          <img src="{% static 'images/person_3.jpg' %}" alt="Sarah Lee">
+          <h4>Sarah Lee</h4>
+          <span>Manager, Creative Studio</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="dots">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+    </div>
+  </div>
+</section>
+
+
+<!-- phse---5 -->
+
+<footer class="footer">
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <form action="#">
+      <label><i class="fa-regular fa-envelope"></i> Subscribe to Newsletter</label>
+      <div class="input-group">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer-container">
+    <!-- Left Content -->
+    <div class="footer-about">
+      <h2>Furni.</h2>
+      <p>
+        Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.
+        Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Knowledge base</a></li>
+        <li><a href="#">Live chat</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Leadership</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Nordic Chair</a></li>
+        <li><a href="#">Kruzo Aero</a></li>
+        <li><a href="#">Ergonomic Chair</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>
+      Copyright ©2025. All Rights Reserved. — Designed with love by
+      <a href="#">Untree.co</a> Distributed By <a href="#">ThemeWagon</a>
+    </p>
+    <div class="bottom-links">
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

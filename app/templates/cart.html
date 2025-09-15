@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {% endblock %}
+  
+ 
+</head>
+<body>
+<div class="c1">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Furni<span>.</span></div>
+    <nav class="nav-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'shop' %}" >Shop</a>
+      <a href="{% url 'about' %}">About us</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'blog' %}">Blog</a>
+      <a href="{% url 'contact' %}">Contact us</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="{% url  'login' %}"><i class="fa-regular fa-user"></i></a>
+      <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="banner">
+    <h1>CART</h1>
+  </section>
+</div>
+
+<div class="cart-container">
+    <table class="cart-table">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in cart %}
+        <tr>
+            <td><img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="product-image"></td>
+            <td class="product-name">{{ item.product.name }}</td>
+            <td>${{ item.product.price }}</td>
+            <td>
+                <div class="quantity-box">
+                    <a href="{% url 'decrease_qty' item.id %}" class="qty-btn">-</a>
+                    <input type="text" value="{{ item.quantity }}" readonly>
+                    <a href="{% url 'increase_qty' item.id %}" class="qty-btn">+</a>
+                </div>
+            </td>
+            <td>${{ item.total_price }}</td>
+            <td><a href="{% url 'remove_item' item.id %}" class="remove-btn">x</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="cart-actions">
+        <button class="btn">Update Cart</button>
+        <button class="btn">Continue Shopping</button>
+    </div>
+
+    <div class="coupon-section">
+        <h3>Coupon</h3>
+        <p>Enter your coupon code if you have one.</p>
+        <form method="post" action="">
+            {% csrf_token %}
+            <input type="text" name="coupon_code" placeholder="Coupon Code">
+            <button type="submit" class="btn">Apply Coupon</button>
+        </form>
+    </div>
+
+    <div class="cart-totals">
+        <h3>CART TOTALS</h3>
+        <p>Subtotal <span>${{ cart_subtotal }}</span></p>
+        <p>Total <span>${{ cart_total }}</span></p>
+        <a href="" class="checkout-btn">Proceed To Checkout</a>
+    </div>
+</div>
+
+</body>
+</html>

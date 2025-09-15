@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {% endblock %}
+  
+ 
+</head>
+<body>
+<div class="s1">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Furni<span>.</span></div>
+    <nav class="nav-links">
+           <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'shop' %}" >Shop</a>
+      <a href="{% url 'about' %}">About us</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'blog' %}" class="active">Blog</a>
+      <a href="{% url 'contact' %}">Contact us</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="{% url  'login' %}"><i class="fa-regular fa-user"></i></a>
+      <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="banner">
+    <h1>BLOG</h1>
+  </section>
+</div>
+
+<!-- phse--1 -->
+ <section class="blog-section">
+  <div class="blog-container">
+
+    <!-- Blog Card 1 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q.jpg' %}"alt="First Time Home Owner Ideas">
+      <h3>First Time Home Owner Ideas</h3>
+      <p>by Kristin Watson on Dec 19, 2021</p>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q2.jpg' %}"alt="How To Keep Your Furniture Clean">
+      <h3>How To Keep Your Furniture Clean</h3>
+      <p>by Robert Fox on Dec 15, 2021</p>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q3.jpg' %}" alt="Small Space Furniture Apartment Ideas">
+      <h3>Small Space Furniture Apartment Ideas</h3>
+      <p>by Kristin Watson on Dec 12, 2021</p>
+    </div>
+
+    <!-- Blog Card 4 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q4.jpg' %}" alt="First Time Home Owner Ideas">
+      <h3>First Time Home Owner Ideas</h3>
+      <p>by Kristin Watson on Dec 19, 2021</p>
+    </div>
+
+    <!-- Blog Card 5 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q5.jpg' %}"alt="How To Keep Your Furniture Clean">
+      <h3>How To Keep Your Furniture Clean</h3>
+      <p>by Robert Fox on Dec 15, 2021</p>
+    </div>
+
+    <!-- Blog Card 6 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q6.jpg' %}" alt="Small Space Furniture Apartment Ideas">
+      <h3>Small Space Furniture Apartment Ideas</h3>
+      <p>by Kristin Watson on Dec 12, 2021</p>
+    </div>
+
+    <!-- Blog Card 7 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q7.jpg' %}" alt="First Time Home Owner Ideas">
+      <h3>First Time Home Owner Ideas</h3>
+      <p>by Kristin Watson on Dec 19, 2021</p>
+    </div>
+
+    <!-- Blog Card 8 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q8.jpg' %}" alt="How To Keep Your Furniture Clean">
+      <h3>How To Keep Your Furniture Clean</h3>
+      <p>by Robert Fox on Dec 15, 2021</p>
+    </div>
+
+    <!-- Blog Card 9 -->
+    <div class="blog-card">
+      <img src="{% static 'images/q9.jpg' %}" alt="Small Space Furniture Apartment Ideas">
+      <h3>Small Space Furniture Apartment Ideas</h3>
+      <p>by Kristin Watson on Dec 12, 2021</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- psee--3 -->
+<section class="testimonial-section">
+  <h2>Testimonials</h2>
+  <div class="testimonial-container">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <p class="quote">
+        “Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.”
+      </p>
+      <div class="author">
+        <img src="{% static 'images/person-1.jpg'%}" alt="Maria Jones">
+        <h4>Maria Jones</h4>
+        <span>CEO, Co-Founder, XYZ Inc.</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <p class="quote">
+        “Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi tristique.”
+      </p>
+      <div class="author">
+        <img src="{% static 'images/person_3.jpg'%}" alt="John Doe">
+        <h4>John Doe</h4>
+        <span>Manager, ABC Ltd.</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="testimonial-card">
+      <p class="quote">
+        “Integer convallis volutpat dui quis scelerisque. Sed et malesuada turpis egestas.”
+      </p>
+      <div class="author">
+        <img src="{% static 'images/person_2.jpg'%}"alt="Emily Smith">
+        <h4>Emily Smith</h4>
+        <span>Designer, PQR Studio</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <form action="#">
+      <label><i class="fa-regular fa-envelope"></i> Subscribe to Newsletter</label>
+      <div class="input-group">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+
+  <div class="footer-container">
+    <!-- Left Content -->
+    <div class="footer-about">
+      <h2>Furni.</h2>
+      <p>
+        Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada.
+        Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Knowledge base</a></li>
+        <li><a href="#">Live chat</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Our team</a></li>
+        <li><a href="#">Leadership</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Nordic Chair</a></li>
+        <li><a href="#">Kruzo Aero</a></li>
+        <li><a href="#">Ergonomic Chair</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>
+      Copyright ©2025. All Rights Reserved. — Designed with love by
+      <a href="#">Untree.co</a> Distributed By <a href="#">ThemeWagon</a>
+    </p>
+    <div class="bottom-links">
+      <a href="#">Terms & Conditions</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

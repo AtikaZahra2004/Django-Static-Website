@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Page</title>
+  {% block css %}
+  <link rel="stylesheet" href="{% static 'css/shop.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  {% endblock %}
+  
+ 
+</head>
+<body>
+<div class="s1">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Furni<span>.</span></div>
+    <nav class="nav-links">
+           <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'shop' %}" class="active">Shop</a>
+      <a href="{% url 'about' %}">About us</a>
+      <a href="{% url 'services' %}">Services</a>
+      <a href="{% url 'blog' %}">Blog</a>
+      <a href="{% url 'contact' %}">Contact us</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="{% url 'login'%}"><i class="fa-regular fa-user"></i></a>
+      <a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="banner">
+    <h1>Shop</h1>
+  </section>
+</div>
+<!-- phhs2 -->
+ <div class="s2">
+    
+  <section class="products-section">
+    <div class="product-card">
+      <img src="{% static 'images/product-1.png'%}" alt="Nordic Chair">
+      <h3>Nordic Chair</h3>
+      <p>$50.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-2.png'%}"alt="Nordic Chair">
+      <h3>Nordic Chair</h3>
+      <p>$50.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-3.png'%}"alt="Kruzo Aero Chair">
+      <h3>Kruzo Aero Chair</h3>
+      <p>$78.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-2.png'%}"alt="Ergonomic Chair">
+      <h3>Ergonomic Chair</h3>
+      <p>$43.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-3.png'%}"alt="Nordic Chair">
+      <h3>Nordic Chair</h3>
+      <p>$50.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-1.png'%}"alt="Nordic Chair">
+      <h3>Nordic Chair</h3>
+      <p>$50.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-2.png'%}"alt="Kruzo Aero Chair">
+      <h3>Kruzo Aero Chair</h3>
+      <p>$78.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+
+    <div class="product-card">
+      <img src="{% static 'images/product-3.png'%}" alt="Ergonomic Chair">
+      <h3>Ergonomic Chair</h3>
+      <p>$43.00</p>
+      <div class="add-btn"><i class="fa-solid fa-plus"></i></div>
+    </div>
+  </section>
+</div>
+ <!--phhs3  -->
+
+ 
+
+  <!-- Footer Section -->
+   <div class="fo">
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <div class="newsletter-text">
+        <i class="fa-regular fa-envelope"></i>
+        <span>Subscribe to Newsletter</span>
+      </div>
+      <form class="newsletter-form">
+        <input type="text" placeholder="Enter your name" required>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+     
+        <!-- <img src="{% static 'images/sofa.png' %}" alt="Chair"> -->
+      </div>
+    </div>
+
+    <!-- Footer Main Content -->
+    <div class="footer-main">
+      <!-- Left Logo/Desc -->
+      <div class="footer-about">
+        <h2>Furni.</h2>
+        <p>
+          Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. 
+          Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. 
+          Pellentesque habitant.
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <div>
+          <a href="#">About us</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact us</a>
+        </div>
+        <div>
+          <a href="#">Support</a>
+          <a href="#">Knowledge base</a>
+          <a href="#">Live chat</a>
+        </div>
+        <div>
+          <a href="#">Jobs</a>
+          <a href="#">Our team</a>
+          <a href="#">Leadership</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div>
+          <a href="#">Nordic Chair</a>
+          <a href="#">Kruzo Aero</a>
+          <a href="#">Ergonomic Chair</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>Copyright ©2025. All Rights Reserved. — Designed with love by Untree.co Distributed By ThemeWagon</p>
+      <div>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
